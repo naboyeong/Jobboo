@@ -3,14 +3,15 @@ name: scheduled test
 on:
   schedule:
     - cron: '1 * * * *'
-    
+
 jobs:
   test:
     runs-on: ubuntu-latest
-    
-    setps:
+
+    steps:
       - name: Check out repository
         uses: actions/checkout@v2
-       
+
       - name: Run a script
-        run: echo "1 mintes every!"
+        run: echo "1 minute every hour!"
+
